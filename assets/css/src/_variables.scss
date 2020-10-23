@@ -1,0 +1,27 @@
+$lightGreen: #86A332;
+$mediumGreen: #61812C;
+$darkGreen: #37431E;
+$yellow: #EDE75C;
+$red: #CC1761;
+
+$darkGreenShadow: #37431e3a;
+$lightGrayShadow: rgba(50, 35, 35, 0.4);
+
+$openSansBlack: 'opensans-extrabold';
+$openSansBold: 'opensans-bold';
+$openSansSemiBold: 'opensans-semibold';
+$openSans: 'opensans-regular';
+$openSansLight: 'opensans-light';
+
+$nunitoBlack: 'nunito-black';
+$nunitoBold: 'nunito-bold';
+
+:root{
+    --flow-space: 10px;
+}
+
+@media screen and (min-width : 400px) {
+    :root {
+        --flow-space: 20px;
+    }
+}

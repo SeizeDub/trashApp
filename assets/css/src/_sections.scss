@@ -1,0 +1,15 @@
+#hero {
+    position : relative;
+    p:first-of-type {
+        margin-bottom : 80px;
+    }
+
+    .success {
+        position : absolute;
+        top : 0px;
+        width : 100%;
+        text-align: center;
+        padding : 5px;
+        background-color : $mediumGreen;
+    }
+}

@@ -1,0 +1,123 @@
+form {
+    width : 100%;
+    max-width : 500px;
+    hr {
+        display : block;
+        margin-top : 40px;
+        height : 40px;
+        border-top : 3px dashed $mediumGreen;
+    }
+    p {
+        text-align : unset;
+    }
+    
+    .error-message {
+        color: $red;
+        font-family: $openSansSemiBold;
+        margin-top : 5px;
+        font-size : 0.8rem;
+    }
+    input.main-button {
+        margin-bottom : 0px;
+    }
+}
+
+fieldset {
+    display : flex;
+    flex-direction : column;
+    margin-bottom : 20px;
+}
+
+fieldset:focus-within {
+    label {
+        color : $yellow !important;
+    }
+    .input-infos {
+        visibility: visible;
+    }
+}
+
+.input-size:focus-within {
+    .input-infos {
+        visibility: visible;
+    }
+}
+
+fieldset.invalid {
+    label {
+        color : $red;
+    }
+    input, textarea {
+        box-shadow: 0 0 4px $lightGrayShadow inset,
+                    0 0 0 4px $red;
+    }
+}
+
+label {
+    font-family : $openSansSemiBold;
+    margin-bottom : 10px;
+    display : inline-block;
+}
+
+input, textarea {
+    font-family: $openSans;
+    width : 100%;
+    padding : 10px;
+    font-size : 1rem;
+    border-radius : 2px;
+    box-shadow: 0 0 4px $lightGrayShadow inset;
+    background-color : whitesmoke;
+    resize: none;
+    &:focus {
+        box-shadow: 0 0 4px $lightGrayShadow inset,
+                    0 0 0 4px $yellow !important;
+        outline : none;
+    }
+}
+
+.input-infos {
+    font-size : 0.8rem;
+    color : $yellow;
+    margin-top : 5px;
+    margin-bottom : unset;
+    text-align : unset;
+    font-family: $openSansSemiBold;
+    visibility: hidden;
+}
+
+
+
+.input-size {
+    width : 100%;
+    display : flex;
+    flex-direction : row;
+    justify-content : space-between;
+    flex-wrap: wrap;
+    fieldset {
+        width : 30%;
+        margin-bottom : unset;
+    }
+    span {
+        width : 100%;
+    }
+    margin-bottom : 20px;
+}
+
+#input-image {
+    background-color : unset;
+    box-shadow : unset;
+    padding : unset;
+    cursor : pointer;
+}
+
+input[type="checkbox"] {
+    width : min-content;
+    align-self : flex-start;
+    transform : scale(1.5);
+    margin-left : 10px;
+}
+
+.optional-tag {
+    font-family : $openSans;
+    font-size : 0.8rem;
+}

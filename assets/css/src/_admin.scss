@@ -1,0 +1,116 @@
+#admin {
+    padding : unset;
+}
+
+article {
+    position : relative;
+    cursor : pointer;
+    width : 100%;
+    background-color : $darkGreen;
+    padding : 20px 10px;
+    border-bottom : 1px dashed $mediumGreen;
+    h3 {
+        color : $lightGreen;
+        text-shadow : 0 0 2px $darkGreenShadow;
+        display : block;
+        margin-top : 20px;
+        margin-bottom : 30px;
+    }
+    p {
+        text-align : left;
+    }
+    .article-content {
+        margin-top : 20px;
+        display : none;
+    }
+    &.active .article-content {
+        display : block;
+    }
+    img {
+        max-width : 100%;
+    }
+    .main-button {
+        margin : auto;
+        margin-top : 20px;
+        &:hover {
+            background-color : $lightGreen;
+        }
+    }
+}
+
+.call-button {
+    color : transparent;
+    display : inline-block;
+    height : 60px;
+    width : 60px;
+    background : url('../../img/call.png') no-repeat center / cover;
+    position : absolute;
+    top : 20px;
+    right : 10px;
+    &:hover {
+        filter : brightness(125%);
+    }
+}
+
+.container {
+    width : 100%;
+    max-width : 700px;
+    display : none;
+    &.active {
+        display : block;
+    }
+}
+
+#task-menu {
+    width : 100%;
+    max-width : 700px;
+    display : flex;
+    button {
+        cursor : pointer;
+        color : whitesmoke;
+        background-color : $lightGreen;
+        width : 50%;
+        height : 50px;
+        font-family: $openSansSemiBold;
+        font-size : 1.2rem;
+        &.active {
+            background-color : $darkGreen;
+        }
+        &:focus {
+            outline : none;
+            border : none;
+        }
+    }
+}
+
+.datetime, .timestamp {
+    display : flex;
+    flex-direction : row;
+    justify-content: space-between;
+    font-family: $openSansBold;
+    margin-bottom : unset;
+    span {
+        display : block;
+        span {
+            display : inline;
+            font-family: $openSans;
+        }
+    }
+}
+
+.description {
+    color : $lightGreen;
+}
+
+#admin-login {
+    margin-top : 80px;
+}
+
+.size {
+    text-align : center;
+}
+
+.address {
+    text-align : center;
+    font-family: $openSansBold;
+}

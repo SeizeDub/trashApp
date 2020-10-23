@@ -20,19 +20,16 @@ function server() {
 }
 
 function refresh() {
-    watch('./assets/css/src/**/*.scss').on('change', styles);
-    watch('./assets/js/**/*.js').on('change', scripts);
-    watch(['./*.php', './php/**/*.php']).on('change', browserSync.reload);
+    watch('./assets/css/src/**/*.scss', parallel(styles));
+    watch('./assets/js/src/**/*.js', parallel(scripts));
+    watch(['**/*.php']).on('change', browserSync.reload);
 }
 
 function scripts() {
     return src(['./assets/js/src/**/*.js',])
-    .pipe(sourcemaps.init())
     .pipe(babel({presets : ['@babel/env']}))
-    .pipe(concat('main.min.js'))
     .pipe(uglify())
-    .pipe(sourcemaps.write())
-    .pipe(dest('./assets/js/distgu'))
+    .pipe(dest('./assets/js/dist'))
     .pipe(browserSync.stream());
 }
 
